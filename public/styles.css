@@ -54,3 +54,23 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+.input-area {
+  margin: 1rem auto;
+  width: 70%;
+  text-align: center;
+  border: 2px solid black;
+  padding: 1rem;
+}
+.input-area input {
+  box-sizing: border-box;
+  display: block;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-bottom: 1px dashed black;
+  width: 100%;
+  padding: 0.5rem;
+}
+.add-button {
+  margin: 1rem;
+  padding: 0.3rem 0.5rem;
+}
