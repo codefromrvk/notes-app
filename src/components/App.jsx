@@ -15,15 +15,22 @@ export default function App(){
             return [...prevValue,note]
         })
   }
+  function deleteNote(currentNoteId){
+    setNotes((prevValue=>{
+        return notes.filter((note,index)=>{
+            return currentNoteId !==index
+        })
+    }))
+}
 
 
 
     return (
     <>
     <Header/>
-    <InputArea onAdd={submitNote}/>
+    <InputArea onAdd={submitNote} />
     {
-     notes.map((note)=>  <Note key={note.key} title={note.title} content={note.content}/>)
+     notes.map((note,index)=>  <Note key={note.key} id={index} onDelete={deleteNote} title={note.title} content={note.content} />)
     }
     <Footer/>
 

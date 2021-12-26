@@ -4,8 +4,7 @@ export default function InputArea(props){
 
     const [inputText,setInputText]=useState({
         title:"",
-        content:""
-    })
+        content:""})
     
     function addNote(e){
         const {id,value}=e.target;
@@ -20,9 +19,15 @@ export default function InputArea(props){
     
     return(
         <div className="input-area">
-            <input onChange={addNote} id="title" placeholder='Title' type="text"/>
-            <input onChange={addNote} id="content" placeholder='Write note' type="text"/>
-            <button onClick={()=>{props.onAdd(inputText)}} className='add-button'><span>Add</span></button>
+            <input onChange={addNote} id="title" placeholder='Title' type="text" value={inputText.title}/>
+            <input onChange={addNote} id="content" placeholder='Write note' type="text" value={inputText.content}/>
+            <button onClick={()=>{
+                props.onAdd(inputText)
+                setInputText({
+                    title:"",
+                    content:""})
+
+                }} className='add-button'><span>Add</span></button>
         </div>
     )
 }
