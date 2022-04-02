@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Link to Backend Code
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Backend Todo: [https://github.com/codefromrvk/notes-app-backend]
 
 ## Available Scripts
 
